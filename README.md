@@ -11,7 +11,7 @@ Put an app running on your machine on the Internet in seconds, at `https://<name
 ## Install
 
 ```sh
-brew install themoniers/applinkly/applinkly
+brew install themoniers/tap/applinkly
 ```
 
 ## Use
