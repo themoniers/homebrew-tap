@@ -1,9 +1,6 @@
 # typed: false
 # frozen_string_literal: true
 
-# The AppLinkly Agent CLI (agent-cli plan D11), downloaded from the AppLinkly Edge's public release
-# routes. Written by `make brew-formula` from release 0.31.0's manifest: regenerate it, never
-# edit it — the copy in the tap themoniers/homebrew-applinkly is this file.
 class Applinkly < Formula
   desc "Put the apps of this machine on their public AppLinkly addresses"
   homepage "https://applinkly.com"
@@ -31,16 +28,12 @@ class Applinkly < Formula
     end
   end
 
-  # One bare, self-contained executable per platform: no archive to unpack.
   def install
     binary = Dir["applinkly-*"].first
     chmod 0755, binary
     bin.install binary => "applinkly"
   end
 
-  # `applinkly service install` delegates to `brew services`, which loads this as the launchd job
-  # homebrew.mxcl.applinkly. Restarted unless it exits cleanly (exit 3, another Agent already
-  # runs, is not clean either: launchd's throttle spaces the tries, as the app's own plist does).
   service do
     run [opt_bin/"applinkly", "service", "run"]
     keep_alive successful_exit: false
