@@ -4,27 +4,27 @@
 class Applinkly < Formula
   desc "Put the apps of this machine on their public AppLinkly addresses"
   homepage "https://applinkly.com"
-  version "0.31.0"
+  version "0.32.1"
 
   on_macos do
     on_arm do
-      url "https://to.monier-michel.com/v1/releases/applinkly-0.31.0-darwin-arm64"
-      sha256 "b2ba36177fd01b369832db259ecaea600c96d1ffbd4cc16dee76f2b7f82b1381"
+      url "https://applinkly.com/v1/releases/applinkly-0.32.1-darwin-arm64"
+      sha256 "aed0c09cb322e3d025c6589d4217819c4e9ab068961a559824c13780539b0f73"
     end
     on_intel do
-      url "https://to.monier-michel.com/v1/releases/applinkly-0.31.0-darwin-amd64"
-      sha256 "e5019976f66ba55a8e1647fe8e82036af3052144bd7ffce1fad0531244e454ed"
+      url "https://applinkly.com/v1/releases/applinkly-0.32.1-darwin-amd64"
+      sha256 "ee1cbc51ab4f5d7c02842ab9253aa24edb90f9f59911bdf6eec8660fa391d2ca"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://to.monier-michel.com/v1/releases/applinkly-0.31.0-linux-arm64"
-      sha256 "54c6d12625eafe98cae92310f55fa3512c1c34d5a98a5236987bc58a448abad2"
+      url "https://applinkly.com/v1/releases/applinkly-0.32.1-linux-arm64"
+      sha256 "75bdf5e4c8de313dfdfc8c46909b6a2ea98055dc6e409a645e8adb3e9f01ed0a"
     end
     on_intel do
-      url "https://to.monier-michel.com/v1/releases/applinkly-0.31.0-linux-amd64"
-      sha256 "75bef241bdbbe08ce8b532723943a0cec36e8beae934f095798d8bf459fd1d1b"
+      url "https://applinkly.com/v1/releases/applinkly-0.32.1-linux-amd64"
+      sha256 "0e323fc27d90cf83f3e43be5dbde7b6d00bbde06b3e9be4db38c605759e78d27"
     end
   end
 
@@ -48,6 +48,9 @@ class Applinkly < Formula
       Or in the background, as a service:
         applinkly service install   (the same as: brew services start applinkly)
         applinkly service login
+      To remove it: first its service, its sign-in and its data, then the program:
+        applinkly service uninstall
+        brew uninstall applinkly
     EOS
   end
 
