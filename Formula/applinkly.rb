@@ -4,27 +4,27 @@
 class Applinkly < Formula
   desc "Put the apps of this machine on their public AppLinkly addresses"
   homepage "https://applinkly.com"
-  version "0.32.1"
+  version "0.34.0"
 
   on_macos do
     on_arm do
-      url "https://applinkly.com/v1/releases/applinkly-0.32.1-darwin-arm64"
-      sha256 "aed0c09cb322e3d025c6589d4217819c4e9ab068961a559824c13780539b0f73"
+      url "https://api.applinkly.com/v1/releases/applinkly-0.34.0-darwin-arm64"
+      sha256 "0600517a1dd7d54698864ee2f0f02c368c75dcc53ba86dab5ee1b29f76749007"
     end
     on_intel do
-      url "https://applinkly.com/v1/releases/applinkly-0.32.1-darwin-amd64"
-      sha256 "ee1cbc51ab4f5d7c02842ab9253aa24edb90f9f59911bdf6eec8660fa391d2ca"
+      url "https://api.applinkly.com/v1/releases/applinkly-0.34.0-darwin-amd64"
+      sha256 "4933439320a4263b6eac864cc59b41725b21562f3017871c1780db2016fb7587"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://applinkly.com/v1/releases/applinkly-0.32.1-linux-arm64"
-      sha256 "75bdf5e4c8de313dfdfc8c46909b6a2ea98055dc6e409a645e8adb3e9f01ed0a"
+      url "https://api.applinkly.com/v1/releases/applinkly-0.34.0-linux-arm64"
+      sha256 "510e40dfcb917c95ffb911ae774cbdd3e0ad306070b286d1afffdc2908d38f6f"
     end
     on_intel do
-      url "https://applinkly.com/v1/releases/applinkly-0.32.1-linux-amd64"
-      sha256 "0e323fc27d90cf83f3e43be5dbde7b6d00bbde06b3e9be4db38c605759e78d27"
+      url "https://api.applinkly.com/v1/releases/applinkly-0.34.0-linux-amd64"
+      sha256 "c6810565c2bc0c911632a94bbca05ae853bfecd214ae4642f6526349382142fd"
     end
   end
 
